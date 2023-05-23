@@ -64,7 +64,7 @@ namespace WebApplication1
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, RectangleDbContext dbContext)
         {
-            dbContext.Database.EnsureCreated();
+            
             if (dbContext.Rectangles.Count() < 200)
             {
                 dbContext.SeedData();
